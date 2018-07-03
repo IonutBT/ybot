@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = "yb!"
 
 client.on('ready', () => {
-  client.user.setGame('yb!help ', 'https://www.youtube.com/watch?v=Bx8rViFtB8Y')
+  client.user.setGame('yb!help ', 'https://www.youtube.com/watch?v=4w0SJ9_-kE8&t=193s')
 })   
 
   client.on('message', message =>{
@@ -26,7 +26,7 @@ client.on('message', message =>{
     const embed = new Discord.RichEmbed()
     .setTitle('YonlyBOT(beta) INFO')
     .setDescription(`•prefix --> yb!
-:beginner:YonlyBOT(beta) COMMANDS
+:beginner:YonlyBOT COMMANDS
 • || yb!mass 
   || yb!support 
   || yb!info 
@@ -38,7 +38,12 @@ client.on('message', message =>{
   || yb!botinfo  
   || yb!assistance
   || yb!botmode
-  || yb!buybot`)
+  || yb!buybot
+  || yb!steamgroup
+  || yb!steam
+  || yb!youtube
+  || yb!language
+  || yb!rankup`)
     .setColor('RANDOM')
    message.channel.sendEmbed(embed);
   }
@@ -102,7 +107,7 @@ client.on('message', message =>{
 if (message.content.startsWith(prefix + 'botinfo')) {
   const embed = new Discord.RichEmbed()
   embed.addField('BOT INFO')
-  embed.addField('Name', 'YonlyBOT(beta)', true)
+  embed.addField('Name', 'YonlyBOT', true)
   embed.addField('Prefix', 'yb!', true)
   embed.addField('Tag:', '6777', true)
   embed.addField('Created at:', '2018-06-13 12:52:59.660000', true)
@@ -169,10 +174,40 @@ client.on('message', msg => {
       msg.channel.send('This bot is in (beta) mode to review scratches and modify them! #SCRIPTERYONLY!');
     }
   });
+      
+client.on('message', msg => {
+    if (msg.content === 'yb!steamgroup') {
+      msg.channel.send('STEAM GROUP yELITE >> https://steamcommunity.com/groups/yelite !');
+    }
+  });
+              
+client.on('message', msg => {
+    if (msg.content === 'yb!language') {
+      msg.channel.send('The current language of the server is Romanian and English!');
+    }
+  });
+         
+client.on('message', msg => {
+    if (msg.content === 'yb!youtube') {
+      msg.channel.send('It's not specified ! We're sorry!!');
+    }
+  });
+              
+client.on('message', msg => {
+    if (msg.content === 'yb!steam') {
+      msg.channel.send('Steam profile of founder @ Yonly # 4995 >> https://steamcommunity.com/id/ionutb1 !');
+    }
+  });
+                  
+client.on('message', msg => {
+    if (msg.content === 'yb!rankup') {
+      msg.channel.send('For the rank-up make an application! ');
+    }
+  });
     
 client.on('message', msg => {
     if (msg.content === 'yb!buybot') {
-      msg.channel.send('You can now buy a special pen for you! We accept any order made through PayPal, PaySafeCard, TasumakiCredits! CONTACT @ Yonly # 4995!');
+      msg.channel.send('You can now buy a special bot for you! We accept any order made through PayPal, PaySafeCard, TasumakiCredits! CONTACT @ Yonly # 4995!');
     }
   });
   
@@ -192,7 +227,7 @@ client.on('guildMemberAdd', member => {
         .setColor('#FF000')
         .setThumbnail(memberavatar)
         .addField('✘ | Name: ', `${member}`)
-        .addField('✘ | Welcome', `**Welcome to YonlyServerRo-comunity!**`)
+        .addField('✘ | Welcome', `**:v: Bine ai venit pe YonlyServerRo-comunity!:smiley: :heavy_check_mark:**`)
         .setTimestamp()
 
         channel.sendEmbed(embed);
@@ -206,7 +241,7 @@ client.on('guildMemberRemove', member => {
         .setColor('#ff0000')
         .setThumbnail(memberavatar)
         .addField('✘ | Name: ', `${member}`)
-        .addField('✘ | Bye -', `**Got out of YonlyServerRo!**`)
+        .addField('✘ | Bye -', `**A iesit :sob:... Speram sa te mai intorci pe la noi ... Esti mereu bine venit**`)
         .setTimestamp()
 
         channel.sendEmbed(embed);
