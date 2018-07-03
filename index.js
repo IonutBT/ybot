@@ -153,7 +153,7 @@ message.delete() }})}}} });
 
 client.on('message', msg => {
     if (msg.content === 'yb!invite') {
-      msg.channel.send('Invite **YonlytBOT{beta)** https://discordapp.com/api/oauth2/authorize?client_id=463675573042937856&permissions=8&scope=bot  :tada:');
+      msg.channel.send('Invite **YonlytBOT** https://discordapp.com/api/oauth2/authorize?client_id=463357559001186304&permissions=8&scope=bot  :tada:');
     }
   });
 
