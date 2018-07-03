@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = "yb!"
 
 client.on('ready', () => {
-  client.user.setGame('yb!help ', 'https://www.youtube.com/watch?v=4w0SJ9_-kE8&t=193s')
+  client.user.setGame('yb!help and more! ', 'https://www.twitch.tv/twitchpresents')
 })   
 
   client.on('message', message =>{
